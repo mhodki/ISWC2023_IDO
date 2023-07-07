@@ -9,4 +9,4 @@ This site contains the following.
 
 3. A copy of the *.ttl file for IDO
 
-The intention is to allow reviewers and interested party to see the ontology with limited instance data for illustrative purposes. The site does not include the OTTR templates.
+The intention is to allow reviewers and interested party to see the ontology with limited instance data for illustrative purposes. 
