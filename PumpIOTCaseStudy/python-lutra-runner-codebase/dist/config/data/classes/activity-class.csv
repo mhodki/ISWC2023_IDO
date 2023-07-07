@@ -1,0 +1,5 @@
+class,superclass,label,description,seeAlso,definedBy
+ex:SensingActivity,lis:Activity,SensingActivity,,,
+ex:TemperatureSensingActivity,ex:SensingActivity,TemperatureSensingActivity,,,
+ex:SoftwareProcess,lis:Activity,SoftwareProcess,,,
+ex:HandleIOTCall,ex:SoftwareProcess,HandleIOTCall,,,

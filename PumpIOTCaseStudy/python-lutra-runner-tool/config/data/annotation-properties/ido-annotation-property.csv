@@ -1,0 +1,2 @@
+annprop,superprop,label,description,seeAlso,definedBy,domain,range
+ex:visibleInDiagram,skos:note,visibleInDiagram,an auxiliary notation to be able to control the automatic generation of visuals of the knowledge graph.,,,

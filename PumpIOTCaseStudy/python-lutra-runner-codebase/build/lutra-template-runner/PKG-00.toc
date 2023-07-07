@@ -1,0 +1,422 @@
+('C:\\Users\\994610\\OneDrive - '
+ 'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\build\\lutra-template-runner\\lutra-template-runner.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True},
+ [('PYZ-00.pyz',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\build\\lutra-template-runner\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\build\\lutra-template-runner\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\build\\lutra-template-runner\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\build\\lutra-template-runner\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\build\\lutra-template-runner\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\build\\lutra-template-runner\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'C:\\Users\\994610\\OneDrive - Grundfos\\Documents\\Projects\\Project 4 - '
+   'IDO '
+   'Templates\\python-lutra-runner\\venv\\lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\994610\\OneDrive - Grundfos\\Documents\\Projects\\Project 4 - '
+   'IDO '
+   'Templates\\python-lutra-runner\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('CreateOntology',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\CreateOntology.py',
+   'PYSOURCE'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('python310.dll',
+   'C:\\Programs\\Python\\Python3102\\python310.dll',
+   'BINARY'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll',
+   'C:\\Programs\\Python\\Python3102\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('ucrtbase.dll',
+   'C:\\Program Files\\Amazon Corretto\\jdk11.0.11_9\\bin\\ucrtbase.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('_decimal.pyd',
+   'C:\\Programs\\Python\\Python3102\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Programs\\Python\\Python3102\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('select.pyd',
+   'C:\\Programs\\Python\\Python3102\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Programs\\Python\\Python3102\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Programs\\Python\\Python3102\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd', 'C:\\Programs\\Python\\Python3102\\DLLs\\_bz2.pyd', 'EXTENSION'),
+  ('unicodedata.pyd',
+   'C:\\Programs\\Python\\Python3102\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd', 'C:\\Programs\\Python\\Python3102\\DLLs\\_ssl.pyd', 'EXTENSION'),
+  ('libcrypto-1_1.dll',
+   'C:\\Programs\\Python\\Python3102\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Programs\\Python\\Python3102\\DLLs\\libssl-1_1.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Program Files\\Amazon '
+   'Corretto\\jdk11.0.11_9\\bin\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('config\\data\\individuals\\activity-individual.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\individuals\\activity-individual.csv',
+   'DATA'),
+  ('config\\output\\LIS-14.omn',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\output\\LIS-14.omn',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_activity-class.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_activity-class.bottr',
+   'DATA'),
+  ('config\\data\\classes\\activity-class.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\classes\\activity-class.csv',
+   'DATA'),
+  ('config\\data\\annotation-properties\\ido-annotation-property.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\annotation-properties\\ido-annotation-property.csv',
+   'DATA'),
+  ('config\\data\\classes\\quality-class.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\classes\\quality-class.csv',
+   'DATA'),
+  ('config\\data\\classes\\physical-quantity-class.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\classes\\physical-quantity-class.csv',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_data-property.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_data-property.bottr',
+   'DATA'),
+  ('config\\lutra.jar',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\lutra.jar',
+   'DATA'),
+  ('config\\imports\\LIS-14.omn',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\imports\\LIS-14.omn',
+   'DATA'),
+  ('config\\output\\catalog-v001.xml',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\output\\catalog-v001.xml',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_annotation-property.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_annotation-property.bottr',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_object-property.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_object-property.bottr',
+   'DATA'),
+  ('config\\data\\classes\\object-with-physical-context-class.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\classes\\object-with-physical-context-class.csv',
+   'DATA'),
+  ('config\\data\\individuals\\software-individual.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\individuals\\software-individual.csv',
+   'DATA'),
+  ('config\\data\\individuals\\quality-datum-individual.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\individuals\\quality-datum-individual.csv',
+   'DATA'),
+  ('config\\settings.json',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\settings.json',
+   'DATA'),
+  ('config\\data\\metadata\\ontology-metadata.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\metadata\\ontology-metadata.csv',
+   'DATA'),
+  ('config\\data\\individuals\\information-object-individual.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\individuals\\information-object-individual.csv',
+   'DATA'),
+  ('config\\data\\data-properties\\ido-data-property.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\data-properties\\ido-data-property.csv',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_activity-profile-individual.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_activity-profile-individual.bottr',
+   'DATA'),
+  ('config\\data\\individuals\\physical-quantity-individual.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\individuals\\physical-quantity-individual.csv',
+   'DATA'),
+  ('config\\data\\individuals\\object-with-physical-context-individual.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\individuals\\object-with-physical-context-individual.csv',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_function-individual.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_function-individual.bottr',
+   'DATA'),
+  ('config\\output\\IdoPumpWithFirmware_v0_0_2.ttl',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\output\\IdoPumpWithFirmware_v0_0_2.ttl',
+   'DATA'),
+  ('config\\data\\classes\\function-class.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\classes\\function-class.csv',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_object-with-physical-context-individual.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_object-with-physical-context-individual.bottr',
+   'DATA'),
+  ('config\\data\\object-properties\\ido-object-property.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\object-properties\\ido-object-property.csv',
+   'DATA'),
+  ('config\\data\\individuals\\function-individual.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\individuals\\function-individual.csv',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_activity-individual.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_activity-individual.bottr',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_quality-datum-individual.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_quality-datum-individual.bottr',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_information-object-individual.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_information-object-individual.bottr',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_object-with-physical-context-class.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_object-with-physical-context-class.bottr',
+   'DATA'),
+  ('config\\templates\\bottr\\ontology_metadata.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\ontology_metadata.bottr',
+   'DATA'),
+  ('config\\templates\\stottr\\library.stottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\stottr\\library.stottr',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_physical-quantity-individual.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_physical-quantity-individual.bottr',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_quality-datum-class.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_quality-datum-class.bottr',
+   'DATA'),
+  ('config\\data\\classes\\quality-datum-class.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\classes\\quality-datum-class.csv',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_quality-class.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_quality-class.bottr',
+   'DATA'),
+  ('config\\imports\\catalog-v001.xml',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\imports\\catalog-v001.xml',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_physical-quantity-class.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_physical-quantity-class.bottr',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_function-class.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_function-class.bottr',
+   'DATA'),
+  ('config\\data\\individuals\\activity-profile-individual.csv',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\data\\individuals\\activity-profile-individual.csv',
+   'DATA'),
+  ('config\\templates\\bottr\\IDO_software-individual.bottr',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\config\\templates\\bottr\\IDO_software-individual.bottr',
+   'DATA'),
+  ('base_library.zip',
+   'C:\\Users\\994610\\OneDrive - '
+   'Grundfos\\Documents\\GitHub\\IDO_CaseStudies\\PumpIOTCaseStudy\\python-lutra-runner\\build\\lutra-template-runner\\base_library.zip',
+   'DATA')],
+ False,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)

@@ -1,0 +1,15 @@
+individual,type,label,visibleInDiagram,description,seeAlso,definedBy,functionalParts,connectedTo,contains,concretizes,hasFunction,participantIn,hasPhysicalQuantity,hasQuality
+ex:5000.02.01.PU001.Pump,ex:E-78-130-F-M-270,5000.02.01.PU001.Pump,"M1,M2,M3","5000.01.01.PU001 identifies Pump 001, in plant subsection 01, in plant section 02 at Plant 5000.",,,"ex:CT001.Controller,ex:PU001.Housing,ex:TT101.TempSensor",,ex:PU001.PumpedFluid,,,,,
+ex:CT001.ControlScheduler.Firmware,,CT001.ControlScheduler.Firmware,M6,,,,,,,ex:CT001.ControlScheduler.Software,ex:CT001.ControlScheduler.Function,ex:TT101.TempSensingActivity,,
+ex:CT001.ControlScheduler.Software,lis:SoftwareArtefact,CT001.ControlScheduler.Software,M6,,,,,,,,,,,
+ex:CT001.Controller,ex:ElectronicsController,CT001.Controller,M3,CT001 is the controller for Pump PU001,,,"ex:CT001.TempMonitoringFirmware,ex:CT001.ControlScheduler.Firmware",,,,,,,
+ex:CT001.ControlSoftware_v1.1.1,ex:SoftwareArtefact,CT001.ControlSoftware_v1.1.1,,"Software installed on the pump controller CT001 to manage communication between the transmitter TT001, store the data and manage the IOT calls",,,,,,,,,,
+ex:CT001.TempMonitoringFirmware,ex:SoftwareAgent,CT001.TempMonitoringFirmware,,"Firmware on CT001, the controller for Pump PU001",,,,,,ex:CT001.ControlSoftware_v1.1.1,ex:CT001.SoftwareToDigitallyExposeTemp,,,
+ex:CT101.IoT.Message,ex:DataStream,CT101.IoT.Message,,,,,,,,ex:PU001.fluidTempEst_TimeStampedIndex54678,,,,
+ex:PU001.fluidTempStoredInUsersCloud_54678,ex:InstalledSoftware,PU001.fluidTempStoredInUsersCloud_54678,,,,,,,,ex:PU001.fluidTempEst_TimeStampedIndex54678,,,,
+ex:PU001.Housing,ex:PumpHousing,PU001.Housing,"M3,M4",The housing of the pump PU001,,,,ex:TT101.TempSensor,ex:PU001.PumpedFluid,,,,ex:PU001.HousingTemperature,
+ex:PU001.PumpedFluid,lis:Stream,PU001.PumpedFluid,M1,"The fluid that is being pumped by the pump, it is contained by the pump housing. The fluid temperature is not measurable directly so instead the pump housing temperature is measured and an estimate of the fluid temperature made from that",,,,,,,,,ex:PU001.FluidTemperature,
+ex:softwareDeveloper_RRunner,lis:Person,softwareDeveloper_RRunner,,In case we wanted to identify the software developer and use the Person class,,,,,,,,,,
+ex:TT101.TempSensor,ex:PumpTemperatureSensor,TT101.TempSensor,"M3,M4,M6",Temperature sensor and its associated electronics (firmware) that is embedded in the pump housing,,,ex:TT101.TempSensor.Firmware,ex:PU001.Housing,,,,,,ex:TT101.TempSensorCalibration
+ex:TT101.TempSensor.Firmware,ex:InstalledSoftware,TT101.TempSensor.Firmware,,The version of firmware installed in PU001.TempSensor.TT101,,,,,,,,ex:TT101.TempSensingActivity,,
+ex:CT001.HandleTempIoTCallAndTempEstimation.Firmware,ex:InstalledSoftware,CT001.HandleTempIoTCallAndTempEstimation.Firmware,M6,,,,,,,ex:CT001.HandleTempIoTCallAndTempEstimation.Software,ex:CT001.HandleTempIoTCallAndTempEstimation,ex:CT001.IoTServerProcess001,,

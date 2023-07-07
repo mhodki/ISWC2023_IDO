@@ -1,0 +1,6 @@
+individual,type,label,visibleInDiagram,description,seeAlso,definedBy,multipleOf,hasResolutionBits
+ex:CT001.Temp.Result,ex:QualityDatum_2SD,CT001.Temp.Result,,Temperature reading of the pump housing stored in the CT001 Memory Register,,,,
+ex:PU001.fluidTempEst_TimeStampedIndex54678,lis:EstimatedDatum,PU001.fluidTempEst_TimeStampedIndex54678,M6,This is a time stamped value for the temperature of the fluid read in the Cloud of the user,,,0.1,
+ex:Celcius,ex:Scale,Celcius,,,,,,
+ex:TT101.tempReading001,ex:Scale,TT101.tempReading001,M5,,,,,14
+ex:TT101.tempReading002,ex:Scale,TT101.tempReading002,"M5,M6",,,,,8

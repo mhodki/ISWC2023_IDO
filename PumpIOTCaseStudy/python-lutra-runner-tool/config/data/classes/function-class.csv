@@ -1,0 +1,4 @@
+class,superclass,label,description,seeAlso,definedBy
+ex:FunctionToDigitiallyExposeState,lis:Function,FunctionToDigitallyExposeState,,"https://www.w3.org/2019/wot/tdPropertyAffordance",
+ex:DigitallyExposeLiquidTemperature,ex:FunctionToDigitiallyExposeState,DigitallyExposeLiquidTemperature,,,
+ex:SoftwareAgentFunction,lis:Function,SoftwareAgentFunction,,,

@@ -1,0 +1,525 @@
+@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pz: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
+@prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+@prefix tmp1: <http://tpl.ottr.xyz/p/asset-maintenance/general/0.1/> .
+@prefix tmp2: <http://tpl.ottr.xyz/p/asset-maintenance/general/0.2/> .
+@prefix iso-tmp: <http://tpl.ottr.xyz/p/asset-maintenance/iso14224/0.2/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix o-docttr: <http://tpl.ottr.xyz/p/docttr/0.1/> .
+@prefix ido-tpl: <http://example.com/ido/> .
+@prefix fmea: <http://example.com/ns/asset-maintenance/fmea/> .
+@prefix listpl: <http://rds.posccaesar.org/ontology/lis14/tpl/0.1/> .
+@prefix o-pizza: <http://tpl.ottr.xyz/pizza/0.1/> .
+@prefix tmp: <http://tpl.ottr.xyz/p/asset-maintenance/general/0.2/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix ottr: <http://ns.ottr.xyz/0.4/> .
+@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix o-owl-ma: <http://tpl.ottr.xyz/owl/macro/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix plmtpl: <http://rds.posccaesar.org/ontology/plm/tpl/0.1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix reqtpl: <http://w3id.org/requirement-ontology/tpl/0.1/> .
+@prefix macro: <http://tpl.ottr.xyz/p/asset-maintenance/owl/macro/0.1/> .
+@prefix wo-tmp: <http://tpl.ottr.xyz/p/asset-maintenance/work-orders/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix o-rdf: <http://tpl.ottr.xyz/rdf/0.1/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix o-owl-ut: <http://tpl.ottr.xyz/owl/util/0.1/> .
+@prefix inter: <http://tpl.ottr.xyz/p/asset-maintenance/interface/0.2/> .
+@prefix fmea-tmp: <http://tpl.ottr.xyz/p/asset-maintenance/fmea/0.2/> .
+@prefix ex: <http://example.org/> .
+@prefix ont: <http://data.grundfos.com/ontology/pump/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix o-owl-dec: <http://tpl.ottr.xyz/owl/declaration/0.1/> .
+@prefix ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix x: <http://example.ottr.xyz/argument/> .
+@prefix o-owl-re: <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+@prefix rdl: <http://rds.posccaesar.org/ontology/plm/rdl/> .
+@prefix o-owl-ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+ex:SensingActivity  rdfs:label  "SensingActivity" ;
+        rdfs:subClassOf  lis:Activity ;
+        rdf:type         owl:Class .
+
+ex:TemperatureSensingActivity
+        rdfs:label       "TemperatureSensingActivity" ;
+        rdfs:subClassOf  ex:SensingActivity ;
+        rdf:type         owl:Class .
+
+ex:SoftwareProcess  rdfs:label  "SoftwareProcess" ;
+        rdfs:subClassOf  lis:Activity ;
+        rdf:type         owl:Class .
+
+ex:HandleIOTCall  rdfs:label  "HandleIOTCall" ;
+        rdfs:subClassOf  ex:SoftwareProcess ;
+        rdf:type         owl:Class .
+
+ex:TT101.TempSensingActivity
+        lis:hasPart          ex:TT101.DownSamplingActivity ;
+        lis:realizes         ex:CT001.ControlScheduler.Function ;
+        rdf:type             ex:TemperatureSensingActivity ;
+        rdfs:label           "TT101.TempSensingActivity" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M4" ;
+        ex:visibleInDiagram  "M5" ;
+        ex:visibleInDiagram  "M8" .
+
+ex:TT101.DownSamplingActivity
+        ex:hasInput          ex:TT101.tempReading001 ;
+        ex:hasResult         ex:TT101.tempReading002 ;
+        rdf:type             lis:Activity ;
+        rdfs:label           "TT101.DownSamplingActivity" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M5" .
+
+ex:CT001.IoTServerProcess001
+        ex:hasInput                ex:TT101.tempReading002 ;
+        lis:hasPassiveParticipant  ex:CT101.IoT.Message ;
+        ex:hasResult               ex:PU001.fluidTempEst_TimeStampedIndex54678 ;
+        lis:realizes               ex:CT001.HandleTempIoTCallAndTempEstimation ;
+        rdf:type                   ex:HandleIOTCall ;
+        rdfs:label                 "CT001.IoTServerProcess001" ;
+        rdf:type                   owl:NamedIndividual ;
+        ex:visibleInDiagram        "M6" .
+
+ex:TT101Temp.Observation
+        rdf:type                  lis:ActivityProfile ;
+        rdfs:label                "TT101Temp.Observation" ;
+        rdfs:comment              "The activity (involving the sensor TT101) of observing the temperature" ;
+        rdf:type                  owl:NamedIndividual ;
+        ex:visibleInDiagram       "M4" ;
+        ex:visibleInDiagram       "M5" ;
+        ex:visibleInDiagram       "M6" ;
+        lis:profileOfQuality      ex:PU001.HousingTemperature ;
+        lis:partOf                ex:TT101.TempSensingActivity ;
+        lis:profileQuantityDatum  ex:TT101.tempReading001 ;
+        lis:hasParticipant        ex:TT101.TempSensor ;
+        ex:observedProperty       ex:PU001.HousingTemperature .
+
+ex:visibleInDiagram  rdfs:subPropertyOf  skos:note ;
+        rdfs:label          "visibleInDiagram" ;
+        rdfs:comment        "an auxiliary notation to be able to control the automatic generation of visuals of the knowledge graph." ;
+        rdf:type            owl:AnnotationProperty .
+
+ex:hasDeveloper  rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "hasDeveloper" .
+
+ex:hasSignificantDigits
+        rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "hasSignificantDigits" .
+
+ex:hasHref  rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "hasHref" .
+
+ex:hasResolutionBits  rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "hasResolutionBits" .
+
+ex:hasSignificantDigits
+        rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "hasSignificantDigits" .
+
+ex:WOTDataProperties  rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "WOTDataProperties" .
+
+ex:multipleOf  rdfs:subPropertyOf  ex:WOTDataProperties ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "multipleOf" .
+
+ex:hasVersion  rdf:type  owl:DatatypeProperty ;
+        rdfs:label  "hasVersion" .
+
+ex:majorVersion  rdfs:subPropertyOf  ex:hasVersion ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "majorVersion" .
+
+ex:patchVersion  rdfs:subPropertyOf  ex:hasVersion ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "patchVersion" .
+
+ex:minorVersion  rdfs:subPropertyOf  ex:hasVersion ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:label          "minorVersion" .
+
+ex:hasResolutionBits  rdf:type  owl:DatatypeProperty ;
+        rdfs:label  "hasResultionBits" .
+
+ex:hasFormHref  rdf:type  owl:DatatypeProperty ;
+        rdfs:label  "hasFormHref" .
+
+ex:FunctionToDigitiallyExposeState
+        rdfs:label       "FunctionToDigitallyExposeState" ;
+        rdfs:seeAlso     <https://www.w3.org/2019/wot/tdPropertyAffordance> ;
+        rdfs:subClassOf  lis:Function ;
+        rdf:type         owl:Class .
+
+ex:DigitallyExposeLiquidTemperature
+        rdfs:label       "DigitallyExposeLiquidTemperature" ;
+        rdfs:subClassOf  ex:FunctionToDigitiallyExposeState ;
+        rdf:type         owl:Class .
+
+ex:SoftwareAgentFunction
+        rdfs:label       "SoftwareAgentFunction" ;
+        rdfs:subClassOf  lis:Function ;
+        rdf:type         owl:Class .
+
+ex:CT001.SoftwareToDigitallyExposeTemp
+        rdf:type      ex:DigitallyExposeLiquidTemperature ;
+        rdfs:label    "CT001.SoftwareToDigitallyExposeTemp" ;
+        rdfs:comment  "Software version stored on the CT001 Firmware that is used to digitally expose (sample/ capture) the temperature on the TT101 sensor" ;
+        rdf:type      owl:NamedIndividual .
+
+ex:CT001.ControlScheduler.Function
+        rdf:type             ex:SoftwareAgentFunction ;
+        rdfs:label           "CT001.ControlScheduler.Function" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M8" .
+
+ex:CT001.HandleTempIoTCallAndTempEstimation
+        rdf:type             lis:Function ;
+        rdfs:label           "CT001.HandleTempIoTCallAndTempEstimation" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M6" .
+
+ex:WotThingDescriptionLiquidTemperature-ThingDescription
+        lis:concretizedBy    ex:CT001.IoTServerProcess001 ;
+        ex:hasFormHref       "1/40000?quantity=1" ;
+        rdf:type             ex:InformationObject ;
+        rdfs:label           "WotThingDescriptionLiquidTemperature-ThingDescription" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M6" .
+
+lis:profileQuantityDatum
+        rdf:type  owl:ObjectProperty .
+
+lis:profileOfQuality  rdf:type  owl:ObjectProperty .
+
+lis:hasFunctionalPart
+        rdf:type  owl:ObjectProperty .
+
+lis:connectedTo  rdf:type  owl:ObjectProperty .
+
+lis:residesIn  rdf:type  owl:ObjectProperty .
+
+lis:contains  rdf:type  owl:ObjectProperty .
+
+lis:concretizes  rdf:type  owl:ObjectProperty .
+
+lis:concretizedBy  rdf:type  owl:ObjectProperty .
+
+lis:hasFunction  rdf:type  owl:ObjectProperty .
+
+lis:participantIn  rdf:type  owl:ObjectProperty .
+
+lis:hasPhysicalQuantity
+        rdf:type  owl:ObjectProperty .
+
+lis:hasParticipant  rdf:type  owl:ObjectProperty .
+
+lis:hasPassiveParticipant
+        rdf:type  owl:ObjectProperty .
+
+lis:qualityQuantifiedAs
+        rdf:type  owl:ObjectProperty .
+
+lis:partOf  rdf:type  owl:ObjectProperty .
+
+ex:observedProperty  rdfs:subPropertyOf  lis:profileOfQuality ;
+        rdfs:label          "observedProperty" ;
+        rdf:type            owl:ObjectProperty ;
+        rdfs:seeAlso        <http://www.w3.org/ns/sosa/observedProperty> ;
+        rdfs:comment        "Relation linking an observation activity profile to the quality of interest that was observed." .
+
+ex:hasResult  rdfs:subPropertyOf  lis:profileQuantityDatum ;
+        rdfs:label          "hasResult" ;
+        rdf:type            owl:ObjectProperty ;
+        rdfs:seeAlso        <http://www.w3.org/ns/sosa/hasResult> ;
+        rdfs:comment        "Relation linking an observation activity and a sensor and  a result. The range should only be one observation." .
+
+ex:hasInput  rdfs:subPropertyOf  lis:hasPassiveParticipant ;
+        rdfs:label          "hasInput" ;
+        rdf:type            owl:ObjectProperty .
+
+ex:DataStream  rdfs:label  "DataStream" ;
+        rdfs:subClassOf  lis:PhysicalArtefact ;
+        rdf:type         owl:Class .
+
+ex:ElectronicsController
+        rdfs:label           "ElectronicsController" ;
+        rdfs:subClassOf      lis:PhysicalArtefact ;
+        rdf:type             owl:Class ;
+        ex:visibleInDiagram  "M3" .
+
+ex:InstalledSoftware  rdfs:label  "InstalledSoftware" ;
+        rdfs:subClassOf  lis:PhysicalArtefact ;
+        rdf:type         owl:Class .
+
+ex:MemoryLocation  rdfs:label  "MemoryLocation" ;
+        rdfs:subClassOf  lis:PhysicalArtefact ;
+        rdf:type         owl:Class .
+
+ex:Pump  rdfs:label          "Pump" ;
+        rdfs:subClassOf      lis:PhysicalArtefact ;
+        rdf:type             owl:Class ;
+        ex:visibleInDiagram  "M2" .
+
+ex:CoolingPump  rdfs:label   "CoolingPump" ;
+        rdfs:subClassOf      ex:Pump ;
+        rdf:type             owl:Class ;
+        ex:visibleInDiagram  "M2" .
+
+ex:E-78-130-F-M-270  rdfs:label  "E-78-130-F-M-270" ;
+        rdfs:subClassOf      ex:CoolingPump ;
+        rdf:type             owl:Class ;
+        ex:visibleInDiagram  "M2" ;
+        ex:visibleInDiagram  "M3" .
+
+ex:PumpHousing  rdfs:label   "PumpHousing" ;
+        rdfs:comment         "Physical artefact that encloses, and contains the moving parts of the hydraulics. Gives direction to the flow of the pumped liquid." ;
+        rdfs:subClassOf      lis:PhysicalArtefact ;
+        rdf:type             owl:Class ;
+        ex:visibleInDiagram  "M3" .
+
+ex:PumpTemperatureSensor
+        rdfs:label       "PumpTemperatureSensor" ;
+        rdfs:comment     "A physical artefact that measures a physical quantity and converts it into a digital representation which can be read by a connected equipment." ;
+        rdfs:subClassOf  lis:PhysicalArtefact ;
+        rdf:type         owl:Class .
+
+_:b0    rdf:type            owl:Restriction ;
+        owl:onProperty      lis:connectedTo ;
+        owl:someValuesFrom  ex:PumpHousing .
+
+ex:PumpTemperatureSensor
+        rdfs:subClassOf      _:b0 ;
+        ex:visibleInDiagram  "M3" .
+
+ex:SoftwareAgent  rdfs:label  "SoftwareAgent" ;
+        rdfs:subClassOf  lis:PhysicalArtefact ;
+        rdf:type         owl:Class .
+
+ex:SoftwareArtefact  rdfs:label  "SoftwareArtefact" ;
+        rdfs:subClassOf  lis:Artefact ;
+        rdfs:subClassOf  lis:InformationObject ;
+        rdf:type         owl:Class .
+
+ex:5000.02.01.PU001.Pump
+        lis:hasFunctionalPart  ex:CT001.Controller ;
+        lis:hasFunctionalPart  ex:PU001.Housing ;
+        lis:hasFunctionalPart  ex:TT101.TempSensor ;
+        lis:contains           ex:PU001.PumpedFluid ;
+        rdf:type               ex:E-78-130-F-M-270 ;
+        rdfs:label             "5000.02.01.PU001.Pump" ;
+        rdfs:comment           "5000.01.01.PU001 identifies Pump 001, in plant subsection 01, in plant section 02 at Plant 5000." ;
+        rdf:type               owl:NamedIndividual ;
+        ex:visibleInDiagram    "M1" ;
+        ex:visibleInDiagram    "M2" ;
+        ex:visibleInDiagram    "M3" .
+
+ex:CT001.ControlScheduler.Firmware
+        lis:participantIn    ex:TT101.TempSensingActivity ;
+        lis:hasFunction      ex:CT001.ControlScheduler.Function ;
+        lis:concretizes      ex:CT001.ControlScheduler.Software ;
+        rdfs:label           "CT001.ControlScheduler.Firmware" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M6" .
+
+ex:CT001.ControlScheduler.Software
+        rdf:type             lis:SoftwareArtefact ;
+        rdfs:label           "CT001.ControlScheduler.Software" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M6" .
+
+ex:CT001.Controller  lis:hasFunctionalPart  ex:CT001.TempMonitoringFirmware ;
+        lis:hasFunctionalPart  ex:CT001.ControlScheduler.Firmware ;
+        rdf:type               ex:ElectronicsController ;
+        rdfs:label             "CT001.Controller" ;
+        rdfs:comment           "CT001 is the controller for Pump PU001" ;
+        rdf:type               owl:NamedIndividual ;
+        ex:visibleInDiagram    "M3" .
+
+ex:CT001.ControlSoftware_v1.1.1
+        rdf:type      ex:SoftwareArtefact ;
+        rdfs:label    "CT001.ControlSoftware_v1.1.1" ;
+        rdfs:comment  "Software installed on the pump controller CT001 to manage communication between the transmitter TT001, store the data and manage the IOT calls" ;
+        rdf:type      owl:NamedIndividual .
+
+ex:CT001.TempMonitoringFirmware
+        lis:hasFunction  ex:CT001.SoftwareToDigitallyExposeTemp ;
+        lis:concretizes  ex:CT001.ControlSoftware_v1.1.1 ;
+        rdf:type         ex:SoftwareAgent ;
+        rdfs:label       "CT001.TempMonitoringFirmware" ;
+        rdfs:comment     "Firmware on CT001, the controller for Pump PU001" ;
+        rdf:type         owl:NamedIndividual .
+
+ex:CT101.IoT.Message  lis:concretizes  ex:PU001.fluidTempEst_TimeStampedIndex54678 ;
+        rdf:type         ex:DataStream ;
+        rdfs:label       "CT101.IoT.Message" ;
+        rdf:type         owl:NamedIndividual .
+
+ex:PU001.fluidTempStoredInUsersCloud_54678
+        lis:concretizes  ex:PU001.fluidTempEst_TimeStampedIndex54678 ;
+        rdf:type         ex:InstalledSoftware ;
+        rdfs:label       "PU001.fluidTempStoredInUsersCloud_54678" ;
+        rdf:type         owl:NamedIndividual .
+
+ex:PU001.Housing  lis:hasPhysicalQuantity  ex:PU001.HousingTemperature ;
+        lis:contains             ex:PU001.PumpedFluid ;
+        lis:connectedTo          ex:TT101.TempSensor ;
+        rdf:type                 ex:PumpHousing ;
+        rdfs:label               "PU001.Housing" ;
+        rdfs:comment             "The housing of the pump PU001" ;
+        rdf:type                 owl:NamedIndividual ;
+        ex:visibleInDiagram      "M3" ;
+        ex:visibleInDiagram      "M4" .
+
+ex:PU001.PumpedFluid  lis:hasPhysicalQuantity  ex:PU001.FluidTemperature ;
+        rdf:type                 lis:Stream ;
+        rdfs:label               "PU001.PumpedFluid" ;
+        rdfs:comment             "The fluid that is being pumped by the pump, it is contained by the pump housing. The fluid temperature is not measurable directly so instead the pump housing temperature is measured and an estimate of the fluid temperature made from that" ;
+        rdf:type                 owl:NamedIndividual ;
+        ex:visibleInDiagram      "M1" .
+
+ex:softwareDeveloper_RRunner
+        rdf:type      lis:Person ;
+        rdfs:label    "softwareDeveloper_RRunner" ;
+        rdfs:comment  "In case we wanted to identify the software developer and use the Person class" ;
+        rdf:type      owl:NamedIndividual .
+
+ex:TT101.TempSensor  lis:hasFunctionalPart  ex:TT101.TempSensor.Firmware ;
+        lis:connectedTo        ex:PU001.Housing ;
+        lis:hasQuality         ex:TT101.TempSensorCalibration ;
+        rdf:type               ex:PumpTemperatureSensor ;
+        rdfs:label             "TT101.TempSensor" ;
+        rdfs:comment           "Temperature sensor and its associated electronics (firmware) that is embedded in the pump housing" ;
+        rdf:type               owl:NamedIndividual ;
+        ex:visibleInDiagram    "M3" ;
+        ex:visibleInDiagram    "M4" ;
+        ex:visibleInDiagram    "M6" .
+
+ex:TT101.TempSensor.Firmware
+        lis:participantIn  ex:TT101.TempSensingActivity ;
+        rdf:type           ex:InstalledSoftware ;
+        rdfs:label         "TT101.TempSensor.Firmware" ;
+        rdfs:comment       "The version of firmware installed in PU001.TempSensor.TT101" ;
+        rdf:type           owl:NamedIndividual .
+
+ex:CT001.HandleTempIoTCallAndTempEstimation.Firmware
+        lis:participantIn    ex:CT001.IoTServerProcess001 ;
+        lis:hasFunction      ex:CT001.HandleTempIoTCallAndTempEstimation ;
+        lis:concretizes      ex:CT001.HandleTempIoTCallAndTempEstimation.Software ;
+        rdf:type             ex:InstalledSoftware ;
+        rdfs:label           "CT001.HandleTempIoTCallAndTempEstimation.Firmware" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M6" .
+
+ex:Temperature  rdfs:label  "Temperature" ;
+        rdfs:seeAlso     rdl:PCA_100003601 ;
+        rdfs:comment     "Partial derivative of internal energy with respect to entropy at constant volume and constant number of particles in the system. Differences in thermodynamic temperatures may be expressed in for instance Kelvin or degrees Celcius. Adapted From: ISO 80000-5:2019 5.1 thermodynamic temperature" ;
+        rdfs:subClassOf  lis:PhysicalQuantity ;
+        rdf:type         owl:Class .
+
+ex:PU001.FluidTemperature
+        lis:qualityQuantifiedAs  ex:PU001.fluidTempEst_TimeStampedIndex54678 ;
+        rdf:type                 ex:Temperature ;
+        rdfs:label               "PU001.FluidTemperature" ;
+        rdfs:comment             "The actual (but not directly measured) temperature of the fluid inside PU001" ;
+        rdf:type                 owl:NamedIndividual ;
+        ex:visibleInDiagram      "M1" .
+
+ex:PU001.HousingTemperature
+        lis:qualityQuantifiedAs  ex:CT001.Temp.Result ;
+        rdf:type                 ex:Temperature ;
+        rdfs:label               "PU001.HousingTemperature" ;
+        rdfs:comment             "The actual temperature of the pump housing, directly measured by the temperature transmitter which is installed in a hole drilled in the pump housing" ;
+        rdf:type                 owl:NamedIndividual .
+
+ex:TT101.TempSensorCalibration
+        rdf:type             lis:Quality ;
+        rdfs:label           "TT101.TempSensorCalibration" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M4" ;
+        ex:visibleInDiagram  "M6" .
+
+ex:Firmware  rdfs:label      "Firmware" ;
+        rdfs:subClassOf      lis:Quality ;
+        rdf:type             owl:Class ;
+        ex:visibleInDiagram  "M8" .
+
+ex:QualityDatum_2SD  rdfs:label  "QualityDatum_2SD" ;
+        rdfs:subClassOf  lis:QualityDatum ;
+        rdf:type         owl:Class .
+
+ex:EstimatedDatum  rdfs:label  "EstimatedDatum" ;
+        rdfs:subClassOf  lis:QualityDatum ;
+        rdf:type         owl:Class .
+
+ex:CalibrationDatum  rdfs:label  "CalibrationDatum" ;
+        rdfs:subClassOf  lis:ScalarQuantityDatum ;
+        rdf:type         owl:Class .
+
+ex:CalibrationMax  rdfs:label  "CalibrationMax" ;
+        rdfs:subClassOf  ex:CalibrationDatum ;
+        rdf:type         owl:Class .
+
+ex:CalibrationMin  rdfs:label  "CalibrationMin" ;
+        rdfs:subClassOf  ex:CalibrationDatum ;
+        rdf:type         owl:Class .
+
+ex:CT001.Temp.Result  rdf:type  ex:QualityDatum_2SD ;
+        rdfs:label    "CT001.Temp.Result" ;
+        rdfs:comment  "Temperature reading of the pump housing stored in the CT001 Memory Register" ;
+        rdf:type      owl:NamedIndividual .
+
+ex:PU001.fluidTempEst_TimeStampedIndex54678
+        rdf:type             lis:EstimatedDatum ;
+        rdfs:label           "PU001.fluidTempEst_TimeStampedIndex54678" ;
+        rdfs:comment         "This is a time stamped value for the temperature of the fluid read in the Cloud of the user" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M6" ;
+        ex:multipleOf        0.1 .
+
+ex:Celcius  rdf:type  ex:Scale ;
+        rdfs:label  "Celcius" ;
+        rdf:type    owl:NamedIndividual .
+
+ex:TT101.tempReading001
+        ex:hasResolutionBits  14 ;
+        rdf:type              ex:Scale ;
+        rdfs:label            "TT101.tempReading001" ;
+        rdf:type              owl:NamedIndividual ;
+        ex:visibleInDiagram   "M5" .
+
+ex:TT101.tempReading002
+        ex:hasResolutionBits  8 ;
+        rdf:type              ex:Scale ;
+        rdfs:label            "TT101.tempReading002" ;
+        rdf:type              owl:NamedIndividual ;
+        ex:visibleInDiagram   "M5" ;
+        ex:visibleInDiagram   "M6" .
+
+ex:CT001.HandleTempIoTCallAndTempEstimation.Software
+        ex:minorVersion      10 ;
+        ex:majorVersion      2 ;
+        ex:patchVersion      4 ;
+        rdf:type             ex:SoftwareArtefact ;
+        rdfs:label           "CT001.HandleTempIoTCallAndTempEstimation.Software" ;
+        rdf:type             owl:NamedIndividual ;
+        ex:visibleInDiagram  "M6" .
+
+ex:pumpwithfirmware  owl:imports  <http://rds.posccaesar.org/ontology/lis14/ont/core/1.1-alpha.0> ;
+        rdf:type         owl:Ontology ;
+        rdfs:label       "Models the Sensors with firmware For the IDO Ontology" ;
+        owl:versionInfo  "0.0.2" .

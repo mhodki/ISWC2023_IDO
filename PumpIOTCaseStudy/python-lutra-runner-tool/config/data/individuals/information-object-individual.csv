@@ -1,0 +1,2 @@
+individual,type,label,visibleInDiagram,description,seeAlso,definedBy,concretizedBy,hasFormHref
+ex:WotThingDescriptionLiquidTemperature-ThingDescription,ex:InformationObject,WotThingDescriptionLiquidTemperature-ThingDescription,M6,,,,ex:CT001.IoTServerProcess001,1/40000?quantity=1

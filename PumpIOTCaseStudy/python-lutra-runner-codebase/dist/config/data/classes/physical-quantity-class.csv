@@ -1,0 +1,2 @@
+class,superclass,label,description,seeAlso,definedBy
+ex:Temperature,lis:PhysicalQuantity,Temperature,"Partial derivative of internal energy with respect to entropy at constant volume and constant number of particles in the system. Differences in thermodynamic temperatures may be expressed in for instance Kelvin or degrees Celcius. Adapted From: ISO 80000-5:2019 5.1 thermodynamic temperature","http://rds.posccaesar.org/ontology/plm/rdl/PCA_100003601",

@@ -1,0 +1,4 @@
+individual,type,label,visibleInDiagram,description,seeAlso,definedBy,qualityQuantifiedAs
+ex:PU001.FluidTemperature,ex:Temperature,PU001.FluidTemperature,M1,The actual (but not directly measured) temperature of the fluid inside PU001,,,ex:PU001.fluidTempEst_TimeStampedIndex54678
+ex:PU001.HousingTemperature,ex:Temperature,PU001.HousingTemperature,,"The actual temperature of the pump housing, directly measured by the temperature transmitter which is installed in a hole drilled in the pump housing",,,ex:CT001.Temp.Result
+ex:TT101.TempSensorCalibration,lis:Quality,TT101.TempSensorCalibration,"M4,M6",,,,
