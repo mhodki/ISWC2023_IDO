@@ -1,4 +1,0 @@
-individual,type,label,visibleInDiagram,description,seeAlso,definedBy,hasPart,hasPassiveParticipant,hasResult,hasInput,realizes
-ex:TT101.TempSensingActivity,ex:TemperatureSensingActivity,TT101.TempSensingActivity,"M4,M5,M8",,,,ex:TT101.DownSamplingActivity,,,,ex:CT001.ControlScheduler.Function
-ex:TT101.DownSamplingActivity,lis:Activity,TT101.DownSamplingActivity,M5,,,,,,ex:TT101.tempReading002,ex:TT101.tempReading001,
-ex:CT001.IoTServerProcess001,ex:HandleIOTCall,CT001.IoTServerProcess001,M6,,,,,ex:CT101.IoT.Message,ex:PU001.fluidTempEst_TimeStampedIndex54678,ex:TT101.tempReading002,ex:CT001.HandleTempIoTCallAndTempEstimation

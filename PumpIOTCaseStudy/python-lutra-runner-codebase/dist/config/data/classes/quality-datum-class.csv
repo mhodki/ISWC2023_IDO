@@ -1,6 +1,0 @@
-class,superclass,label,description,seeAlso,definedBy,significantDigitsDatatype,significantDigitsRestiriction,significantDigitsLiteral
-ex:QualityDatum_2SD,lis:QualityDatum,QualityDatum_2SD,,,,xsd:integer,xsd:minInclusive,2
-ex:EstimatedDatum,lis:QualityDatum,EstimatedDatum,,,,,,
-ex:CalibrationDatum,lis:ScalarQuantityDatum,CalibrationDatum,,,,,,
-ex:CalibrationMax,ex:CalibrationDatum,CalibrationMax,,,,,,
-ex:CalibrationMin,ex:CalibrationDatum,CalibrationMin,,,,,,

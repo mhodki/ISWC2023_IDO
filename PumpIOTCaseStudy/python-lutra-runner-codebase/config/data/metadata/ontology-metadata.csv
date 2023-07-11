@@ -1,2 +1,0 @@
-id,ontname,ontology,versionInfo,title,description,seeAlso,imports
-10,pump-with-firmware,http://example.org/pumpwithfirmware,0.0.2,"Models the Sensors with firmware For the IDO Ontology",,,"http://rds.posccaesar.org/ontology/lis14/ont/core/1.1-alpha.0"

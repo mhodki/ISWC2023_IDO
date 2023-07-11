@@ -1,4 +1,0 @@
-individual,type,label,visibleInDiagram,description,seeAlso,definedBy
-ex:CT001.SoftwareToDigitallyExposeTemp,ex:DigitallyExposeLiquidTemperature,CT001.SoftwareToDigitallyExposeTemp,,Software version stored on the CT001 Firmware that is used to digitally expose (sample/ capture) the temperature on the TT101 sensor,,
-ex:CT001.ControlScheduler.Function,ex:SoftwareAgentFunction,CT001.ControlScheduler.Function,M8,,,
-ex:CT001.HandleTempIoTCallAndTempEstimation,lis:Function,CT001.HandleTempIoTCallAndTempEstimation,M6,,,

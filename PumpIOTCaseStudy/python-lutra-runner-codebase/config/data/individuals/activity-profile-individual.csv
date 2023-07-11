@@ -1,2 +1,0 @@
-individual,type,label,visibleInDiagram,description,seeAlso,definedBy,hasParticipant,profileOfQuality,partOf,observedProperty,profileQuantityDatum
-ex:TT101Temp.Observation,lis:ActivityProfile,TT101Temp.Observation,"M4,M5,M6",The activity (involving the sensor TT101) of observing the temperature,,,ex:TT101.TempSensor,ex:PU001.HousingTemperature,ex:TT101.TempSensingActivity,ex:PU001.HousingTemperature,ex:TT101.tempReading001
