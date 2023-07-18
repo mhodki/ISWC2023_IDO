@@ -18,6 +18,6 @@ This contains:
 
 6. Note please that while this document provides a comprehensive description of IDO and includes, in the Appendix, a full description of the case study summarised in the ISWC paper. There are some minor gaps in ancillary parts of the IDO document that will be addressed during the standardisation process.
 
-7. The OTTR templates mentioned in the paper are not included in the GiHub.
+7. The OTTR templates mentioned in the paper are not included in this GitHub.
 
 For any questions please contact: Melinda Hodkiewicz melinda.hodkiewicz@uwa.edu.au
