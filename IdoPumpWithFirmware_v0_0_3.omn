@@ -1,0 +1,762 @@
+Prefix: : <http://example.org/pumpwithfirmware/>
+Prefix: acme: <http://example.org/>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: dcterms: <http://purl.org/dc/terms/>
+Prefix: iof-av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/>
+Prefix: lis: <http://rds.posccaesar.org/ontology/lis14/rdl/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: plm: <http://rds.posccaesar.org/ontology/plm/rdl/>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: sosa: <http://www.w3.org/ns/sosa/>
+Prefix: td: <https://www.w3.org/2019/wot/td>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://example.org/pumpwithfirmware>
+<http://example.org/pumpwithfirmware/0.0.3>
+Import: <http://rds.posccaesar.org/ontology/lis14/ont/core/1.1-alpha.0>
+
+Annotations: 
+    dcterms:contributor "Johan W. Klüwer, DNV",
+    dcterms:contributor "Maja Milicic Brandt, Siemens",
+    dcterms:contributor "Melinda Hodkiewicz, UWA",
+    dcterms:contributor "Mikkel Haggren Brynildsen, Grundfos"
+
+AnnotationProperty: <http://www.w3.org/2004/02/skos/core#note>
+
+    
+AnnotationProperty: dcterms:contributor
+
+    
+AnnotationProperty: dcterms:description
+
+    
+AnnotationProperty: iof-av:naturalLanguageDefinition
+
+    
+AnnotationProperty: iof-av:usageNote
+
+    
+AnnotationProperty: owl:deprecated
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:seeAlso
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:integer
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: acme:hasInput
+
+    SubPropertyOf: 
+        lis:hasPassiveParticipant
+    
+    
+ObjectProperty: lis:concretizedBy
+
+    
+ObjectProperty: lis:concretizes
+
+    
+ObjectProperty: lis:connectedTo
+
+    
+ObjectProperty: lis:contains
+
+    
+ObjectProperty: lis:creates
+
+    
+ObjectProperty: lis:datumUOM
+
+    
+ObjectProperty: lis:hasActiveParticipant
+
+    
+ObjectProperty: lis:hasFunction
+
+    
+ObjectProperty: lis:hasFunctionalPart
+
+    
+ObjectProperty: lis:hasPart
+
+    
+ObjectProperty: lis:hasParticipant
+
+    
+ObjectProperty: lis:hasPassiveParticipant
+
+    
+ObjectProperty: lis:hasPhysicalQuantity
+
+    
+ObjectProperty: lis:hasQuality
+
+    
+ObjectProperty: lis:partOf
+
+    
+ObjectProperty: lis:participantIn
+
+    
+ObjectProperty: lis:profileOfQuality
+
+    
+ObjectProperty: lis:profileQuantityDatum
+
+    
+ObjectProperty: lis:qualityOf
+
+    
+ObjectProperty: lis:qualityQuantifiedAs
+
+    
+ObjectProperty: lis:realizes
+
+    
+ObjectProperty: lis:representedIn
+
+    
+ObjectProperty: lis:residesIn
+
+    
+ObjectProperty: sosa:hasResult
+
+    Annotations: 
+        rdfs:label "hasResult",
+        rdfs:seeAlso <http://www.w3.org/ns/sosa/hasResult>,
+        iof-av:naturalLanguageDefinition "Relation linking an observation activity and a sensor and  a result. The range should only be one observation."
+    
+    SubPropertyOf: 
+        lis:creates
+    
+    
+ObjectProperty: sosa:madeBySensor
+
+    SubPropertyOf: 
+        lis:hasActiveParticipant
+    
+    
+ObjectProperty: sosa:observedProperty
+
+    Annotations: 
+        rdfs:label "observedProperty",
+        rdfs:seeAlso <http://www.w3.org/ns/sosa/observedProperty>,
+        iof-av:naturalLanguageDefinition "Relation linking an observation activity profile to the quality of interest that was observed."
+    
+    SubPropertyOf: 
+        lis:profileOfQuality
+    
+    
+DataProperty: acme:WoTDataProperties
+
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: acme:hasDeveloper
+
+    
+DataProperty: acme:hasFormHref
+
+    
+DataProperty: acme:hasResolutionInBits
+
+    Domain: 
+        lis:InformationObject
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: acme:hasSignificantDigits
+
+    
+DataProperty: acme:hasVersion
+
+    
+DataProperty: acme:majorVersion
+
+    SubPropertyOf: 
+        acme:hasVersion
+    
+    
+DataProperty: acme:minorVersion
+
+    SubPropertyOf: 
+        acme:hasVersion
+    
+    
+DataProperty: acme:multipleOf
+
+    SubPropertyOf: 
+        acme:WoTDataProperties
+    
+    
+DataProperty: acme:patchVersion
+
+    SubPropertyOf: 
+        acme:hasVersion
+    
+    
+DataProperty: lis:datumValue
+
+    
+DataProperty: owl:topDataProperty
+
+    
+Class: acme:CalibrationDatum
+
+    SubClassOf: 
+        lis:ScalarQuantityDatum
+    
+    
+Class: acme:CalibrationMax
+
+    SubClassOf: 
+        acme:CalibrationDatum
+    
+    
+Class: acme:CalibrationMin
+
+    SubClassOf: 
+        acme:CalibrationDatum
+    
+    
+Class: acme:CoolingPump
+
+    SubClassOf: 
+        acme:Pump
+    
+    
+Class: acme:DataStream
+
+    SubClassOf: 
+        lis:PhysicalArtefact
+    
+    
+Class: acme:DigitallyExposeLiquidTemperature
+
+    SubClassOf: 
+        acme:DigitallyExposeState
+    
+    
+Class: acme:E-78-130-F-M-270
+
+    SubClassOf: 
+        acme:CoolingPump
+    
+    
+Class: acme:ElectronicsController
+
+    Annotations: 
+        rdfs:label "ElectronicsController"
+    
+    SubClassOf: 
+        lis:PhysicalArtefact
+    
+    
+Class: acme:EstimatedDatum
+
+    SubClassOf: 
+        lis:QualityDatum
+    
+    
+Class: acme:HandleIOTCall
+
+    SubClassOf: 
+        acme:SoftwareProcess
+    
+    
+Class: acme:InstalledSoftware
+
+    SubClassOf: 
+        lis:PhysicalArtefact
+    
+    
+Class: acme:Pump
+
+    SubClassOf: 
+        lis:PhysicalArtefact
+    
+    
+Class: acme:PumpHousing
+
+    Annotations: 
+        rdfs:label "PumpHousing",
+        iof-av:naturalLanguageDefinition "Physical artefact that encloses, and contains the moving parts of the hydraulics. Gives direction to the flow of the pumped liquid."
+    
+    SubClassOf: 
+        lis:PhysicalArtefact
+    
+    
+Class: acme:PumpTemperatureSensor
+
+    Annotations: 
+        rdfs:label "PumpTemperatureSensor",
+        iof-av:naturalLanguageDefinition "A physical artefact that measures a physical quantity and converts it into a digital representation which can be read by a connected equipment."
+    
+    SubClassOf: 
+        lis:PhysicalArtefact,
+        lis:connectedTo some acme:PumpHousing
+    
+    
+Class: acme:QualityDatum_2SD
+
+    SubClassOf: 
+        lis:QualityDatum,
+        acme:hasSignificantDigits only xsd:integer[>= 2]
+    
+    
+Class: acme:SensingActivity
+
+    SubClassOf: 
+        lis:Activity
+    
+    
+Class: acme:SoftwareAgent
+
+    SubClassOf: 
+        lis:PhysicalArtefact
+    
+    
+Class: acme:SoftwareAgentFunction
+
+    SubClassOf: 
+        lis:Function
+    
+    
+Class: acme:SoftwareProcess
+
+    SubClassOf: 
+        lis:Activity
+    
+    
+Class: acme:Temperature
+
+    Annotations: 
+        rdfs:label "Temperature",
+        rdfs:seeAlso <http://rds.posccaesar.org/ontology/plm/rdl/PCA_100003601>,
+        rdfs:seeAlso "ISO 80000-5:2019 5.1 \"thermodynamic temperature\"",
+        iof-av:naturalLanguageDefinition "Partial derivative of internal energy with respect to entropy at constant volume and constant number of particles in the system. 
+
+Differences in thermodynamic temperatures may be expressed in for instance Kelvin or degrees Celcius."
+    
+    SubClassOf: 
+        lis:PhysicalQuantity
+    
+    
+Class: acme:TemperatureSensingActivity
+
+    SubClassOf: 
+        acme:SensingActivity
+    
+    
+Class: acme:DigitallyExposeState
+
+    Annotations: 
+        rdfs:seeAlso <https://www.w3.org/2019/wot/tdPropertyAffordance>
+    
+    SubClassOf: 
+        lis:Function
+    
+    
+Class: lis:Activity
+
+    
+Class: lis:ActivityProfile
+
+    
+Class: lis:Function
+
+    
+Class: lis:InformationObject
+
+    
+Class: lis:Person
+
+    
+Class: lis:PhysicalArtefact
+
+    
+Class: lis:PhysicalObject
+
+    
+Class: lis:PhysicalQuantity
+
+    
+Class: lis:Quality
+
+    
+Class: lis:QualityDatum
+
+    
+Class: lis:ScalarQuantityDatum
+
+    
+Class: lis:Scale
+
+    
+Class: lis:SoftwareArtefact
+
+    
+Class: lis:Stream
+
+    
+Individual: <http://example.org/5000.02.01.PU001.Pump>
+
+    Annotations: 
+        dcterms:description "5000.01.01.PU001 identifies Pump 001, in plant subsection 01, in plant section 02 at Plant 5000."
+    
+    Types: 
+        acme:E-78-130-F-M-270
+    
+    Facts:  
+     lis:contains  acme:PU001.PumpedFluid,
+     lis:hasFunctionalPart  acme:CT001.Controller,
+     lis:hasFunctionalPart  acme:PU001.Housing,
+     lis:hasFunctionalPart  acme:TT101.TempSensor
+    
+    
+Individual: acme:CT001.ControlScheduler.Firmware
+
+    Types: 
+        acme:InstalledSoftware
+    
+    Facts:  
+     lis:concretizes  acme:CT001.ControlScheduler.Software,
+     lis:hasFunction  acme:CT001.ControlScheduler.Function,
+     lis:participantIn  acme:TT101.TempSensingActivity
+    
+    
+Individual: acme:CT001.ControlScheduler.Function
+
+    Types: 
+        acme:SoftwareAgentFunction
+    
+    
+Individual: acme:CT001.ControlScheduler.Software
+
+    Types: 
+        lis:SoftwareArtefact
+    
+    
+Individual: acme:CT001.ControlSoftware_v1.1.1
+
+    Annotations: 
+        dcterms:description "Software installed on the pump controller CT001 to manage communication between the transmitter TT001, store the data and manage the IOT calls"
+    
+    Types: 
+        lis:SoftwareArtefact
+    
+    
+Individual: acme:CT001.Controller
+
+    Annotations: 
+        dcterms:description "CT001 is the controller for Pump PU001"
+    
+    Types: 
+        acme:ElectronicsController
+    
+    Facts:  
+     lis:hasFunctionalPart  acme:CT001.ControlScheduler.Firmware,
+     lis:hasFunctionalPart  acme:CT001.TempMonitoringFirmware
+    
+    
+Individual: acme:CT001.HandleTempIoTCallAndTempEstimation
+
+    Types: 
+        lis:Function
+    
+    
+Individual: acme:CT001.HandleTempIoTCallAndTempEstimation.Firmware
+
+    Types: 
+        acme:InstalledSoftware
+    
+    Facts:  
+     lis:concretizes  acme:CT001.HandleTempIoTCallAndTempEstimation.Software,
+     lis:hasFunction  acme:CT001.HandleTempIoTCallAndTempEstimation,
+     lis:participantIn  acme:CT001.IoTServerProcess001
+    
+    
+Individual: acme:CT001.HandleTempIoTCallAndTempEstimation.Software
+
+    Types: 
+        lis:SoftwareArtefact
+    
+    Facts:  
+     acme:majorVersion  10,
+     acme:minorVersion  2,
+     acme:patchVersion  4
+    
+    
+Individual: acme:CT001.IoTServerProcess001
+
+    Annotations: 
+        dcterms:description "Software installed on CT001 to manage the IOT call from the client"
+    
+    Types: 
+        acme:HandleIOTCall
+    
+    Facts:  
+     acme:hasInput  acme:TT101.tempReading002,
+     lis:hasPassiveParticipant  acme:CT101.IoT.Message,
+     lis:realizes  acme:CT001.HandleTempIoTCallAndTempEstimation,
+     sosa:hasResult  acme:PU001.fluidTempEst_TimeStampedIndex54678
+    
+    
+Individual: acme:CT001.FunctionToDigitallyExposeTemp
+
+    Annotations: 
+        dcterms:description "Function of the CT001 Firmware to digitally expose (sample/capture) the temperature on the TT101 sensor"
+    
+    Types: 
+        acme:DigitallyExposeLiquidTemperature
+    
+    
+Individual: acme:CT001.TempMonitoringFirmware
+
+    Annotations: 
+        dcterms:description "Firmware on CT001, the controller for Pump PU001"
+    
+    Types: 
+        acme:InstalledSoftware
+    
+    Facts:  
+     lis:concretizes  acme:CT001.ControlSoftware_v1.1.1,
+     lis:hasFunction  acme:CT001.FunctionToDigitallyExposeTemp,
+     lis:participantIn  acme:CT001.IoTServerProcess001
+    
+    
+Individual: acme:CT001.temp.Result
+
+    Annotations: 
+        dcterms:description "Temperature reading of the pump housing stored in the CT001 Memory Register"
+    
+    Types: 
+        acme:QualityDatum_2SD
+    
+    
+Individual: acme:CT101.IoT.Message
+
+    Annotations: 
+        dcterms:description "The IoT message"
+    
+    Types: 
+        acme:DataStream
+    
+    Facts:  
+     lis:concretizes  acme:PU001.fluidTempEst_TimeStampedIndex54678
+    
+    
+Individual: acme:Celsius
+
+    Types: 
+        lis:Scale
+    
+    
+Individual: acme:PU001.FluidTemperature
+
+    Annotations: 
+        dcterms:description "The actual (but not directly measured) temperature of the fluid inside PU001"
+    
+    Types: 
+        acme:Temperature
+    
+    Facts:  
+     lis:qualityQuantifiedAs  acme:PU001.fluidTempEst_TimeStampedIndex54678
+    
+    
+Individual: acme:PU001.Housing
+
+    Annotations: 
+        dcterms:description "The housing of the pump PU001"
+    
+    Types: 
+        acme:PumpHousing
+    
+    Facts:  
+     lis:contains  acme:PU001.PumpedFluid,
+     lis:hasPhysicalQuantity  acme:PU001.HousingTemperature
+    
+    
+Individual: acme:PU001.HousingTemperature
+
+    Annotations: 
+        dcterms:description "The actual temperature of the pump housing, directly measured by the temperature transmitter which is installed in a hole drilled in the pump housing"
+    
+    Types: 
+        acme:Temperature
+    
+    Facts:  
+     lis:qualityQuantifiedAs  acme:CT001.temp.Result
+    
+    
+Individual: acme:PU001.PumpedFluid
+
+    Annotations: 
+        dcterms:description "The fluid that is being pumped by the pump, it is contained by the pump housing. The fluid temperature is not measurable directly so instead the pump housing temperature is measured and an estimate of the fluid temperature made from that"
+    
+    Types: 
+        lis:Stream
+    
+    Facts:  
+     lis:hasPhysicalQuantity  acme:PU001.FluidTemperature
+    
+    
+Individual: acme:PU001.fluidTempEst_TimeStampedIndex54678
+
+    Annotations: 
+        dcterms:description "This is a time stamped value for the temperature of the fluid read in the Cloud of the user"
+    
+    Types: 
+        acme:EstimatedDatum
+    
+    Facts:  
+     acme:multipleOf  0.1
+    
+    
+Individual: acme:PU001.fluidTempStoredInUsersCloud_54678
+
+    Annotations: 
+        dcterms:description "This is a time stamped value for the temperature of the fluid sent to and stored in the User's Cloud"
+    
+    Types: 
+        acme:InstalledSoftware
+    
+    Facts:  
+     lis:concretizes  acme:PU001.fluidTempEst_TimeStampedIndex54678
+    
+    
+Individual: acme:TT101.DownSamplingActivity
+
+    Types: 
+        lis:Activity
+    
+    Facts:  
+     acme:hasInput  acme:TT101.tempReading001,
+     sosa:hasResult  acme:TT101.tempReading002
+    
+    
+Individual: acme:TT101.Temp.Observation
+
+    Annotations: 
+        dcterms:description "The activity (involving the sensor TT101) of observing the temperature"
+    
+    Types: 
+        lis:ActivityProfile
+    
+    Facts:  
+     lis:partOf  acme:TT101.TempSensingActivity,
+     lis:profileQuantityDatum  acme:TT101.tempReading001,
+     sosa:madeBySensor  acme:TT101.TempSensor,
+     sosa:observedProperty  acme:PU001.HousingTemperature
+    
+    
+Individual: acme:TT101.TempSensingActivity
+
+    Annotations: 
+        dcterms:description "Activity involving the TT101 Temp sensor (and its functional part the Firmware) to collect temperature readings"
+    
+    Types: 
+        acme:TemperatureSensingActivity
+    
+    Facts:  
+     lis:hasPart  acme:TT101.DownSamplingActivity,
+     lis:realizes  acme:CT001.ControlScheduler.Function
+    
+    
+Individual: acme:TT101.TempSensor
+
+    Annotations: 
+        rdfs:comment "Temperature sensor and its associated electronics (firmware) that is embedded in the pump housing"
+    
+    Types: 
+        acme:PumpTemperatureSensor
+    
+    Facts:  
+     lis:connectedTo  acme:PU001.Housing,
+     lis:hasFunctionalPart  acme:TT101.TempSensor.Firmware,
+     lis:hasQuality  acme:TT101.TempSensorCalibration
+    
+    
+Individual: acme:TT101.TempSensor.Firmware
+
+    Annotations: 
+        dcterms:description "The version of firmware installed in PU001.TempSensor.TT101"
+    
+    Types: 
+        acme:InstalledSoftware
+    
+    Facts:  
+     lis:participantIn  acme:TT101.TempSensingActivity
+    
+    
+Individual: acme:TT101.TempSensorCalibration
+
+    Types: 
+        lis:Quality
+
+    Facts:
+        lis:qualityQuantifiedAs acme:TT101.TempSensorCalibrationMin, lis:qualityQuantifiedAs acme:TT101.TempSensorCalibrationMax
+
+Individual: acme:TT101.TempSensorCalibrationMin
+    Types: acme:CalibrationMin
+    Facts: lis:datumUOM acme:Celsius, lis:datumValue 0
+
+Individual: acme:TT101.TempSensorCalibrationMax
+    Types: acme:CalibrationMax
+    Facts: lis:datumUOM acme:Celsius, lis:datumValue 95
+
+        
+Individual: acme:TT101.tempReading001
+
+    Types: 
+        lis:QualityDatum
+    
+    Facts:  
+     acme:hasResolutionInBits  14
+    
+    
+Individual: acme:TT101.tempReading002
+
+    Types: 
+        lis:QualityDatum
+    
+    Facts:  
+     acme:hasResolutionInBits  8
+    
+    
+Individual: acme:WotThingDescriptionLiquidTemperature-ThingDescription
+
+    Types: 
+        lis:InformationObject
+    
+    Facts:  
+     lis:concretizedBy  acme:CT001.IoTServerProcess001,
+     acme:hasFormHref  "1/40000?quantity=1"
+    
+    
