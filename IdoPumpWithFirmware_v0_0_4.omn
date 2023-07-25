@@ -442,18 +442,27 @@ Individual: <http://example.org/5000.02.01.PU001.Pump>
     
 Individual: acme:CT001.ControlScheduler.Firmware
 
+    Annotations: 
+        dcterms:description "The Firmware (a software artefact) compiled by Grundfos containing instructions for operating the Controller"
+    
     Types: 
         lis:SoftwareArtefact
     
     
 Individual: acme:CT001.ControlScheduler.Function
 
+    Annotations: 
+        dcterms:description "The software agent function required/performed by the ControlScheduler.InstalledFirmware"
+    
     Types: 
         acme:SoftwareAgentFunction
     
     
 Individual: acme:CT001.ControlScheduler.InstalledFirmware
 
+    Annotations: 
+        dcterms:description "The as-installed version of ControlScheduler.Firmware on the CT001 controller. This InstalledFirmware  participates in the TT101.TempSensingActivity"
+    
     Types: 
         acme:InstalledSoftware
     
@@ -475,7 +484,7 @@ Individual: acme:CT001.ControlSoftware_v1.1.1
 Individual: acme:CT001.Controller
 
     Annotations: 
-        dcterms:description "CT001 is the controller for Pump PU001"
+        dcterms:description "CT001 is the controller for Pump PU001 purchased from Siemens by Grundfos"
     
     Types: 
         acme:ElectronicsController
@@ -488,7 +497,7 @@ Individual: acme:CT001.Controller
 Individual: acme:CT001.FunctionToDigitallyExposeTemp
 
     Annotations: 
-        dcterms:description "Function of the CT001 Firmware to digitally expose (sample/capture) the temperature on the TT101 sensor"
+        dcterms:description "Function of the CT001 TempMonitoringInstalledFirmware to digitally expose (sample/capture) the temperature on the TT101 sensor"
     
     Types: 
         acme:DigitallyExposeLiquidTemperature
@@ -496,12 +505,18 @@ Individual: acme:CT001.FunctionToDigitallyExposeTemp
     
 Individual: acme:CT001.HandleTempIoTCallAndTempEstimation
 
+    Annotations: 
+        dcterms:description "A function specifically for handling the IOT call and estimation steps for the temperature data"
+    
     Types: 
         lis:Function
     
     
 Individual: acme:CT001.HandleTempIoTCallAndTempEstimation.Firmware
 
+    Annotations: 
+        dcterms:description "The firmware (compiled by Grundfos) that performs the functions required for the IOT call and temperature estimation. This firmware has different versions as updates to the code are made e.g. minor version 2, patch version 4 and major version 10."
+    
     Types: 
         lis:SoftwareArtefact
     
@@ -513,6 +528,9 @@ Individual: acme:CT001.HandleTempIoTCallAndTempEstimation.Firmware
     
 Individual: acme:CT001.HandleTempIoTCallAndTempEstimation.InstalledFirmware
 
+    Annotations: 
+        dcterms:description "The as-installed version of HandleTempIoTCallAndTempEstimationr.Firmware on the CT001 controller. This InstalledFirmware  participates in the CT001.IoTServerProcess001 activity"
+    
     Types: 
         acme:InstalledSoftware
     
@@ -525,7 +543,7 @@ Individual: acme:CT001.HandleTempIoTCallAndTempEstimation.InstalledFirmware
 Individual: acme:CT001.IoTServerProcess001
 
     Annotations: 
-        dcterms:description "Software installed on CT001 to manage the IOT call from the client"
+        dcterms:description "This process takes as input the temperature reading from TT101.tempReading002 and IoT call message protocols to produce a time-stamped value for the PU001 fluid temperature estimation in an appropriate format. It delivers the this datum to the right output port adhering to the Modbus protocol."
     
     Types: 
         acme:HandleIOTCall
@@ -540,7 +558,7 @@ Individual: acme:CT001.IoTServerProcess001
 Individual: acme:CT001.TempMonitoringInstalledFirmware
 
     Annotations: 
-        dcterms:description "Firmware on CT001, the controller for Pump PU001"
+        dcterms:description "The as-installed version of CT001.ControlSoftware on the CT001 controller. This InstalledFirmware  participates in the CT001.IoTServerProcess"
     
     Types: 
         acme:InstalledSoftware
@@ -554,7 +572,7 @@ Individual: acme:CT001.TempMonitoringInstalledFirmware
 Individual: acme:CT001.temp.Result
 
     Annotations: 
-        dcterms:description "Temperature reading of the pump housing stored in the CT001 Memory Register"
+        dcterms:description "The value of the actual temperature of the pump housing stored in the CT001 controller. This value is what is measured by temperature transmitter embedded in the PU001 pump housing."
     
     Types: 
         acme:QualityDatum_2SD
@@ -563,7 +581,7 @@ Individual: acme:CT001.temp.Result
 Individual: acme:CT101.IoT.Message
 
     Annotations: 
-        dcterms:description "The IoT message"
+        dcterms:description "A DataStream for the PU001.fluidTempEst_TimeStampedIndex54678 message transmitted using the Iot protocol"
     
     Types: 
         acme:DataStream
@@ -574,6 +592,9 @@ Individual: acme:CT101.IoT.Message
     
 Individual: acme:Celsius
 
+    Annotations: 
+        dcterms:description "a unit of measure for temperature"
+    
     Types: 
         lis:Scale
     
@@ -581,7 +602,7 @@ Individual: acme:Celsius
 Individual: acme:PU001.FluidTemperature
 
     Annotations: 
-        dcterms:description "The actual (but not directly measured) temperature of the fluid inside PU001"
+        dcterms:description "The actual (but not directly measured) temperature of the fluid inside PU001. The temperature transmitter is located inside the pump housing but does not have direct contact with the pumped fluid. The reading made by the sensor will have some measurement error and depend the placement of the sensor and the thermal characteristics of the housing."
     
     Types: 
         acme:Temperature
@@ -606,7 +627,7 @@ Individual: acme:PU001.Housing
 Individual: acme:PU001.HousingTemperature
 
     Annotations: 
-        dcterms:description "The actual temperature of the pump housing, directly measured by the temperature transmitter which is installed in a hole drilled in the pump housing"
+        dcterms:description "The actual temperature of the pump housing, as measured by the temperature transmitter which is installed in a hole drilled in the pump housing. This is not the same as the pumped fluid temperature as the fluid temperature cannot be directly measured, see PU001.FluidTemperature for more information."
     
     Types: 
         acme:Temperature
@@ -618,7 +639,7 @@ Individual: acme:PU001.HousingTemperature
 Individual: acme:PU001.PumpedFluid
 
     Annotations: 
-        dcterms:description "The fluid that is being pumped by the pump, it is contained by the pump housing. The fluid temperature is not measurable directly so instead the pump housing temperature is measured and an estimate of the fluid temperature made from that"
+        dcterms:description "The fluid that is being pumped by the pump, it is contained by the pump housing."
     
     Types: 
         lis:Stream
@@ -630,7 +651,7 @@ Individual: acme:PU001.PumpedFluid
 Individual: acme:PU001.fluidTempEst_TimeStampedIndex54678
 
     Annotations: 
-        dcterms:description "This is a time stamped value for the temperature of the fluid read in the Cloud of the user"
+        dcterms:description "This is a time stamped value for the temperature of the fluid read in the Cloud of ACME Digital Dairy and ACME. It is the value-delivery step for both business units. All prior steps in this ontology are intended to ensure the measurement precision of the data reported in this time stamped value. It has the data property for the required precision of the temperature reading."
     
     Types: 
         acme:EstimatedDatum
@@ -642,7 +663,7 @@ Individual: acme:PU001.fluidTempEst_TimeStampedIndex54678
 Individual: acme:PU001.fluidTempStoredInUsersCloud_54678
 
     Annotations: 
-        dcterms:description "This is a time stamped value for the temperature of the fluid sent to and stored in the User's Cloud"
+        dcterms:description "This is the part in the code, installed in the User's cloud software, that holds the time stamped value for the temperature of the fluid in the pump."
     
     Types: 
         acme:InstalledSoftware
@@ -653,6 +674,9 @@ Individual: acme:PU001.fluidTempStoredInUsersCloud_54678
     
 Individual: acme:TT101.DownSamplingActivity
 
+    Annotations: 
+        dcterms:description "The process of downsampling from 16-bit to 8-bit, this process takes as input TT101.tempReading001 and outputs TT101.tempReading002. It is this part of the process that the ontology is designed to track as the downsampling process results in a change in precision of the reported pump fluid temperature value."
+    
     Types: 
         lis:Activity
     
@@ -664,7 +688,7 @@ Individual: acme:TT101.DownSamplingActivity
 Individual: acme:TT101.Temp.Observation
 
     Annotations: 
-        dcterms:description "The activity (involving the sensor TT101) of observing the temperature"
+        dcterms:description "The activity (involving the temperature transmitter sensor TT101 installed in the pump housing) of observing the temperature."
     
     Types: 
         lis:ActivityProfile
@@ -679,7 +703,7 @@ Individual: acme:TT101.Temp.Observation
 Individual: acme:TT101.TempSensingActivity
 
     Annotations: 
-        dcterms:description "Activity involving the TT101 Temp sensor (and its functional part the Firmware) to collect temperature readings"
+        dcterms:description "Process controlled by the CT001.ControlScheduler.InstalledFirmware which has part the 16 bit to 8 bit downsampling activity described in TT101.DownSamplingActivity."
     
     Types: 
         acme:TemperatureSensingActivity
@@ -692,7 +716,7 @@ Individual: acme:TT101.TempSensingActivity
 Individual: acme:TT101.TempSensor
 
     Annotations: 
-        rdfs:comment "Temperature sensor and its associated electronics (firmware) that is embedded in the pump housing"
+        rdfs:comment "Temperature sensor and its associated electronics (firmware) embedded in the pump housing."
     
     Types: 
         acme:PumpTemperatureSensor
@@ -717,6 +741,9 @@ Individual: acme:TT101.TempSensor.InstalledFirmware
     
 Individual: acme:TT101.TempSensorCalibration
 
+    Annotations: 
+        dcterms:description "Holds the calibration parameters for the TT101.TempSensorCalibration. In this use case two example parameters are provided, calibration max and a calibration min."
+    
     Types: 
         lis:Quality
     
@@ -727,6 +754,9 @@ Individual: acme:TT101.TempSensorCalibration
     
 Individual: acme:TT101.TempSensorCalibrationMax
 
+    Annotations: 
+        dcterms:description "Contains the data values for calibration and the units (celsius). In this example, there are two parameters, calibration max and calibration min. These describe the expected range of the temperature readings for this pump installation."
+    
     Types: 
         acme:CalibrationMax
     
@@ -737,6 +767,9 @@ Individual: acme:TT101.TempSensorCalibrationMax
     
 Individual: acme:TT101.TempSensorCalibrationMin
 
+    Annotations: 
+        dcterms:description "Contains the data values for calibration and the units (celsius). In this example, there are two parameters, calibration max and calibration min. These describe the expected range of the temperature readings for this pump installation."
+    
     Types: 
         acme:CalibrationMin
     
@@ -747,15 +780,21 @@ Individual: acme:TT101.TempSensorCalibrationMin
     
 Individual: acme:TT101.tempReading001
 
+    Annotations: 
+        dcterms:description "TT101.tempReading001 holds the 16 bit resolution value of the temperature reading and is the input to the TT101.DownSamplingActivity"
+    
     Types: 
         lis:QualityDatum
     
     Facts:  
-     acme:hasResolutionInBits  14
+     acme:hasResolutionInBits  16
     
     
 Individual: acme:TT101.tempReading002
 
+    Annotations: 
+        dcterms:description "TT101.tempReading002 holds the 8 bit resolution value of the temperature reading and is the output of the TT101.DownSamplingActivity"
+    
     Types: 
         lis:QualityDatum
     
@@ -765,6 +804,9 @@ Individual: acme:TT101.tempReading002
     
 Individual: acme:WotThingDescriptionLiquidTemperature-ThingDescription
 
+    Annotations: 
+        dcterms:description "Contains the precision for the temperature estimation (1 deg C in this example) in the WoT protocol format."
+    
     Types: 
         lis:InformationObject
     
