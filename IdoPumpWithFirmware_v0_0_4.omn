@@ -543,7 +543,7 @@ Individual: acme:CT001.HandleTempIoTCallAndTempEstimation.InstalledFirmware
 Individual: acme:CT001.IoTServerProcess001
 
     Annotations: 
-        dcterms:description "This process takes as input the temperature reading from TT101.tempReading002 and IoT call message protocols to produce a time-stamped value for the PU001 fluid temperature estimation in an appropriate format. It delivers the this datum to the right output port adhering to the Modbus protocol."
+        dcterms:description "This process takes as input the temperature reading from TT101.tempReading002 and IoT call message protocols to produce a time-stamped value for the PU001 fluid temperature estimation in an appropriate format. It delivers the this datum to the right output port adhering to the WoT communication protocol."
     
     Types: 
         acme:HandleIOTCall
