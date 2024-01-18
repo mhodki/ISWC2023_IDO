@@ -2,7 +2,7 @@
 
 This repo is now an ARCHIVE retained to house the ontology presented at ISWC and the associated paper.
 
-For those interested in ongoing work on this ontology, there is a new repo at https://github.com/PCA-POSC-Caesar-Association/IDO_Use_Case_Pump_with_firmware
+For those interested in ongoing work on this ontology, there is a new repo at https://github.com/PCA-POSC-Caesar-Association/IDO_Use_Case_Pump_with_firmware. This repo is private but if you are interested in participating in the IDO development process and use cases, please contact the IDO Project Manager Rylandsholm, Pål <Pal.Rylandsholm@dnv.com>
 
 This repo contain a record of the files submitted to support ISWC 2023 Industry paper submission
 
